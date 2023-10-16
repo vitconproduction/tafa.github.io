@@ -1,0 +1,341 @@
+{
+  "settings": {
+    "name": "Tafa",
+    "currentPage": "page-1003387862.html",
+    "theme": {
+      "name": "startm5",
+      "title": "StartM5",
+      "styling": {
+        "primaryColor": "#2b7a69",
+        "secondaryColor": "#ffd7ef",
+        "successColor": "#3a341c",
+        "infoColor": "#320707",
+        "warningColor": "#a0e2e1",
+        "dangerColor": "#ffffff",
+        "mainFont": "Inter Tight",
+        "display1Font": "Inter Tight",
+        "display1Size": "3",
+        "display2Font": "Inter Tight",
+        "display2Size": "2",
+        "display5Font": "Inter Tight",
+        "display5Size": "1.5",
+        "display7Font": "Inter Tight",
+        "display7Size": "1",
+        "display4Font": "Inter Tight",
+        "display4Size": "1.4",
+        "isRoundedImages": true,
+        "isRoundedButtons": true,
+        "isLargeButtons": true,
+        "isGhostButtonBorder": true,
+        "underlinedLinks": true,
+        "isAnimatedOnScroll": true,
+        "isScrollToTopButton": false
+      },
+      "additionalSetColors": [
+        "#3a381c",
+        "#fffd00",
+        "#d88828",
+        "#ffa25b",
+        "#2b7a69",
+        "#164fd3",
+        "#ff7d19"
+      ]
+    },
+    "path": "@PROJECT_PATH@",
+    "versionFirst": "5.8.25",
+    "siteFonts": [
+      {
+        "css": "'Inter Tight', sans-serif",
+        "name": "Inter Tight",
+        "url": "https://fonts.googleapis.com/css?family=Inter+Tight:100,200,300,400,500,600,700,800,900,100i,200i,300i,400i,500i,600i,700i,800i,900i"
+      }
+    ],
+    "uniqCompNum": 65,
+    "versionPublish": "5.9.4",
+    "imageResize": true,
+    "chatbutton": {},
+    "favicon": false,
+    "mbrsiteDomain": "phernxjcpn",
+    "usedWebp": false,
+    "cssOptimize": false,
+    "lazyLoad": false,
+    "robotsSwitcher": false,
+    "sitemapSwitcher": false,
+    "sitemapSwitcherAuto": false,
+    "siteUrl": false,
+    "cookiesAlert": false,
+    "gdpr": false,
+    "pwa-switcher": false,
+    "screenshot": "screenshot.png",
+    "publishChangesOnly": true,
+    "publishType": "github",
+    "gitHubName": "tafa",
+    "gitHubPath": ""
+  },
+  "pages": {
+    "page-1003387862.html": {
+      "settings": {
+        "main": true,
+        "title": "Cà Phê sữa",
+        "meta_descr": "",
+        "header_custom": "",
+        "footer_custom": "",
+        "html_before": ""
+      },
+      "components": [
+        {
+          "alias": false,
+          "_styles": {
+            "& when not (@fullScreen)": {
+              "padding-top": "(@paddingTop * 1rem)",
+              "padding-bottom": "(@paddingBottom * 1rem)"
+            },
+            "& when (@bg-type = 'color')": {
+              "background-color": "@bg-value"
+            },
+            "& when (@bg-type = 'image')": {
+              "background-image": "url(@bg-value)"
+            },
+            ".mbr-fallback-image.disabled": {
+              "display": "none"
+            },
+            ".mbr-fallback-image": {
+              "display": "block",
+              "background-size": "cover",
+              "background-position": "center center",
+              "width": "100%",
+              "height": "100%",
+              "position": "absolute",
+              "top": "0",
+              "& when (@bg-type = 'video')": {
+                "background-image": "url(@fallBackImage)"
+              }
+            },
+            ".row": {
+              "flex-direction": "row-reverse"
+            },
+            ".mbr-description": {
+              "color": "#d88828",
+              "text-align": "left"
+            }
+          },
+          "_name": "image01",
+          "_sourceTheme": "startm5",
+          "_customHTML": "<section data-bs-version=\"5.1\" class=\"image1\" group=\"Images & Videos\" data-bg-video=\"{{bg.type == 'video' && bg.value.url}}\" mbr-class=\"{'mbr-fullscreen': fullScreen,\n                    'mbr-parallax-background': bg.parallax}\">\n  <mbr-parameters>\n    <header>Size</header>\n    <input type=\"checkbox\" title=\"Full Screen\" name=\"fullScreen\">\n    <input type=\"checkbox\" title=\"Full Width\" name=\"fullWidth\">\n    <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"10\" step=\"1\" value=\"6\" condition=\"fullScreen == false\">\n    <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"10\" step=\"1\" value=\"6\" condition=\"fullScreen == false\">\n    <input type=\"range\" name=\"textWidth\" title=\"Image\" min=\"4\" max=\"12\" step=\"1\" value=\"9\">\n    <header>Show/Hide</header>\n    <input type=\"checkbox\" title=\"Title\" name=\"showTitle\" checked>\n    <input type=\"checkbox\" title=\"Text\" name=\"showText\" checked>\n    <header>Background</header>\n    <fieldset type=\"background\" name=\"bg\" parallax>\n      <input type=\"image\" title=\"Image\" value=\"../_images/background1.jpg\">\n      <input type=\"color\" title=\"Color\" value=\"#ffffff\" selected>\n      <input type=\"video\" title=\"Video\" value=\"https://vimeo.com/428046504\">\n    </fieldset>\n    <header condition=\"bg.type === 'video'\">Fallback Image</header>\n    <input type=\"image\" title=\"Fallback Image\" value=\"../_images/background1.jpg\" name=\"fallBackImage\" condition=\"bg.type === 'video'\">\n    <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" condition=\"bg.type !== 'color'\" checked>\n    <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#ffffff\" condition=\"overlay && bg.type !== 'color'\">\n    <input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.7\" condition=\"overlay && bg.type !== 'color'\">\n  </mbr-parameters>\n\n  <div class=\"mbr-fallback-image disabled\" mbr-if=\"bg.type == 'video'\"></div>\n  <div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type!== 'color'\" mbr-style=\"{'opacity': overlayOpacity, 'background-color': overlayColor}\"></div>\n\n  <div mbr-class=\"{'container': !fullWidth, 'container-fluid': fullWidth}\">\n    <div class=\"row justify-content-center\">\n      <div class=\"col-12 col-lg-{{textWidth}}\">\n        <div class=\"image-wrapper mb-4\">\n          <img class=\"w-100\" src=\"@PROJECT_PATH@/assets/images/ff6183b1f7dc208279cd-600x400.jpg\" alt=\"Mobirise Website Builder\">\n        </div>\n        <h4 class=\"mbr-description mbr-fonts-style mb-3 align-center\" mbr-theme-style=\"display-2\" mbr-if=\"showTitle\" data-app-selector=\".mbr-description\">\n          <b>Cà phê sữa đá Việt Nam đã nổi tiếng như thế nào?</b></h4>\n        <p class=\"mbr-description mbr-fonts-style mb-0 align-center\" mbr-theme-style=\"display-7\" mbr-if=\"showText\" data-app-selector=\".mbr-description\">Vào những năm thế kỷ thứ 19, người Việt Nam đã bắt đầu thưởng thức cà phê. Tuy nhiên cho đến bây giờ vẫn chưa biết ai là người đầu tiên sáng tạo ra món cà phê sữa đá. Không chỉ riêng người Việt Nam mà các đoàn đại sứ, nguyên thủ quốc gia, các tờ báo nổi tiếng trên thế giới đều quan tâm đến thức uống này. Điển hình là khi tổng thống Mỹ công du đến Hà Nội, ông đã liên tục nhắc đến món cà phê sữa đá đặc trưng này. Thủ tướng Canada khi đến thăm Thành Phố Hồ Chí Minh cũng không quên thưởng thức món cà phê sữa đá. Bên cạnh đó, các tờ báo nổi tiếng như CN Traveler đã bình chọn cà phê sữa đá là thức uống không thể bỏ qua khi đến Việt Nam.&nbsp;Cà phê sữa đá của Việt Nam còn được trang Bloomberg bình chọn là 1 trong 10 món cà phê độc đáo nhất thế giới.<br>Chỉ bấy nhiêu đó thôi cũng đủ hiểu được giá trị của món cà phê sữa đá Việt Nam của mình rồi.&nbsp;</p>\n      </div>\n    </div>\n  </div>\n</section>",
+          "_cid": "tSOywbmt4A",
+          "_anchor": "image01-1n",
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {}
+        },
+        {
+          "alias": false,
+          "_styles": {
+            "padding-top": "(@paddingTop * 1rem)",
+            "padding-bottom": "(@paddingBottom * 1rem)",
+            "& when (@bg-type = \"color\")": {
+              "background-color": "@bg-value"
+            },
+            "& when (@bg-type = \"image\")": {
+              "background-image": "url(@bg-value)"
+            },
+            ".item-wrapper img": {
+              "width": "80px",
+              "height": "80px",
+              "object-fit": "cover",
+              "border-radius": "50% !important"
+            },
+            ".mbr-fallback-image.disabled": {
+              "display": "none"
+            },
+            ".mbr-fallback-image": {
+              "display": "block",
+              "background-size": "cover",
+              "background-position": "center center",
+              "width": "100%",
+              "height": "100%",
+              "position": "absolute",
+              "top": "0",
+              "& when (@bg-type = \"video\")": {
+                "background-image": "url(@fallBackImage)"
+              }
+            },
+            ".item-wrapper": {
+              "background": "@cardbg",
+              "margin-bottom": "2rem",
+              "padding": "2.25rem",
+              "@media (max-width: 767px)": {
+                "padding": "2rem 1.5rem",
+                "margin-bottom": "1rem"
+              }
+            },
+            ".card-title, .iconfont-wrapper": {
+              "color": "#000000",
+              "text-align": "center"
+            },
+            ".content-head": {
+              "max-width": "800px"
+            },
+            ".mbr-section-title": {
+              "color": "#ff7d19"
+            },
+            ".mbr-section-subtitle": {
+              "color": "#ffffff"
+            },
+            ".card-text": {
+              "color": "#000000"
+            }
+          },
+          "_name": "features019",
+          "_sourceTheme": "startm5",
+          "_customHTML": "<section data-bs-version=\"5.1\" class=\"features19\" group=\"Features\" data-bg-video=\"{{bg.type == 'video' && bg.value.url}}\" mbr-class=\"{'mbr-parallax-background': bg.parallax}\">\n\t<mbr-parameters>\n\t\t<header>Size</header>\n\t\t<input type=\"checkbox\" title=\"Full Width\" name=\"fullWidth\">\n\t\t<input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"10\" step=\"1\" value=\"6\">\n\t\t<input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"10\" step=\"1\" value=\"6\">\n\t\t<header>Show/Hide</header>\n\t\t<input type=\"checkbox\" title=\"Title\" name=\"showMainTitle\" checked>\n\t\t<input type=\"checkbox\" title=\"Subtitle\" name=\"showMainSubtitle\" checked>\n\t\t<header>Card</header>\n\t\t<input type=\"checkbox\" title=\"Title\" name=\"showTitle\" checked>\n\t\t<input type=\"checkbox\" title=\"Text\" name=\"showText\" checked>\n\t\t<input type=\"checkbox\" title=\"Images\" name=\"showImages\" checked>\n\t\t<select title=\"Columns\" name=\"columns\">\n\t\t\t<option value=\"12\">1</option>\n\t\t\t<option value=\"6\">2</option>\n\t\t\t<option value=\"4\" selected>3</option>\n\t\t\t<option value=\"3\">4</option>\n\t\t</select>\n\t\t<input type=\"color\" title=\"Cards BG\" name=\"cardbg\" value=\"#ffffff\" selected>\n\t\t<header>Background</header>\n\t\t<fieldset type=\"background\" name=\"bg\" parallax>\n\t\t\t<input type=\"image\" title=\"Image\" value=\"@PROJECT_PATH@/assets/images/e41746067f66a838f177-736x1104.jpg\" parallax selected>\n\t\t\t<input type=\"color\" title=\"Color\" value=\"#2e481a\">\n\t\t\t<input type=\"video\" title=\"Video\" value=\"https://vimeo.com/428046504\">\n\t\t</fieldset>\n\t\t<header condition=\"bg.type === 'video'\">Fallback Image</header>\n\t\t<input type=\"image\" title=\"Fallback Image\" value=\"../_images/background1.jpg\" name=\"fallBackImage\" condition=\"bg.type === 'video'\">\n\t\t<input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" condition=\"bg.type !== 'color'\" checked>\n\t\t<input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#000000\" condition=\"overlay && bg.type !== 'color'\">\n\t\t<input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.4\" condition=\"overlay && bg.type !== 'color'\">\n\t</mbr-parameters>\n\n\t<div class=\"mbr-fallback-image disabled\" mbr-if=\"bg.type == 'video'\"></div>\n\t<div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type!== 'color'\" mbr-style=\"{'opacity': overlayOpacity, 'background-color': overlayColor}\"></div>\n\t<div mbr-class=\"{'container': !fullWidth, 'container-fluid': fullWidth}\">\n\t\t<div class=\"row justify-content-center\">\n\t\t\t<div class=\"col-12 mb-5 content-head\" mbr-if=\"showMainTitle || showMainSubtitle\">\n\t\t\t\t<h3 class=\"mbr-section-title mbr-fonts-style align-center mb-0\" mbr-theme-style=\"display-2\" mbr-if=\"showMainTitle\" data-app-selector=\".mbr-section-title\"><b>Vậy Bạn đã biết cách pha cà phê sữa đá ngon nhất chưa?</b></h3>\n\t\t\t\t<h5 class=\"mbr-section-subtitle mbr-fonts-style align-center mb-0 mt-4\" mbr-theme-style=\"display-7\" mbr-if=\"showMainSubtitle\" data-app-selector=\".mbr-section-subtitle\">\n\t\t\t\t\tChắc chắn Bạn đã từng thưởng thức một ly cà phê sữa ngon, nhưng để pha một ly cà phê sữa đậm đà tròn vị có lẽ Bạn chưa có công thức đặc biệt cho riêng mình.</h5>\n\t\t\t</div>\n\t\t</div>\n\t\t<div class=\"row\">\n\t\t\t<div class=\"item features-without-image  col-12 col-lg-{{columns}}\">\n\t\t\t\t<div class=\"item-wrapper\">\n\t\t\t\t\t<div class=\"card-box align-left\">\n\t\t\t\t\t\t<div class=\"img-wrapper mb-3\" mbr-if=\"showImages\">\n\t\t\t\t\t\t\t<img class src=\"@PROJECT_PATH@/assets/images/2a5ed263a203755d2c12-160x213.jpg\" alt>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t<h5 class=\"card-title mbr-fonts-style\" mbr-theme-style=\"display-7\" mbr-if=\"showTitle\" data-app-selector=\".card-title, .iconfont-wrapper\"><b>Chuẩn bị nguyên liệu</b></h5>\n\t\t\t\t\t\t<p class=\"card-text mbr-fonts-style\" mbr-theme-style=\"display-7\" mbr-if=\"showText\" data-app-selector=\".card-text\">\n\t\t\t\t\t\t\tLorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vitae erat. Integer\n\t\t\t\t\t\t\taliquam, lorem vitae dapibus sollicitudin, nibh nisl egestas enim, ut dapibus odio augue\n\t\t\t\t\t\t\tvenenatis mi. Ut tempus dui at mi semper, vel dapibus nisl consectetur. Phasellus\n\t\t\t\t\t\t\tconsectetur sapien non lacus imperdiet dapibus. In facilisis sed mi rutrum consequat. Sed\n\t\t\t\t\t\t\taugue sem diam.\n\t\t\t\t\t\t</p>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t\t<div class=\"item features-without-image col-12 col-lg-{{columns}}\">\n\t\t\t\t<div class=\"item-wrapper\">\n\t\t\t\t\t<div class=\"card-box align-left\">\n\t\t\t\t\t\t<div class=\"img-wrapper mb-3\" mbr-if=\"showImages\">\n\t\t\t\t\t\t\t<img class src=\"@PROJECT_PATH@/assets/images/324cc571b511624f3b00-160x221.jpg\" alt>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t<h5 class=\"card-title mbr-fonts-style\" mbr-theme-style=\"display-7\" mbr-if=\"showTitle\" data-app-selector=\".card-title, .iconfont-wrapper\"><b>Tỉ lệ pha cà phê sữa bằng phin</b></h5>\n\t\t\t\t\t\t<p class=\"card-text mbr-fonts-style\" mbr-theme-style=\"display-7\" mbr-if=\"showText\" data-app-selector=\".card-text\">\n\t\t\t\t\t\t\tLorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vitae erat. Integer\n\t\t\t\t\t\t\taliquam, lorem vitae dapibus sollicitudin, nibh nisl egestas enim, ut dapibus odio augue\n\t\t\t\t\t\t\tvenenatis mi. Ut tempus dui at mi semper, vel dapibus nisl consectetur. Phasellus\n\t\t\t\t\t\t\tconsectetur sapien non lacus imperdiet dapibus. In facilisis sed mi rutrum consequat. Sed\n\t\t\t\t\t\t\taugue sem diam.\n\t\t\t\t\t\t</p>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t\t<div class=\"item features-without-image  col-12 col-lg-{{columns}}\">\n\t\t\t\t<div class=\"item-wrapper\">\n\t\t\t\t\t<div class=\"card-box align-left\">\n\t\t\t\t\t\t<div class=\"img-wrapper mb-3\" mbr-if=\"showImages\">\n\t\t\t\t\t\t\t<img class src=\"@PROJECT_PATH@/assets/images/5836a30bd36b04355d7a-160x229.jpg\" alt>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t<h5 class=\"card-title mbr-fonts-style\" mbr-theme-style=\"display-7\" mbr-if=\"showTitle\" data-app-selector=\".card-title, .iconfont-wrapper\"><b>Các bước pha cà phê sữa ngon</b></h5>\n\t\t\t\t\t\t<p class=\"card-text mbr-fonts-style\" mbr-theme-style=\"display-7\" mbr-if=\"showText\" data-app-selector=\".card-text\">\n\t\t\t\t\t\t\tLorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vitae erat. Integer\n\t\t\t\t\t\t\taliquam, lorem vitae dapibus sollicitudin, nibh nisl egestas enim, ut dapibus odio augue\n\t\t\t\t\t\t\tvenenatis mi. Ut tempus dui at mi semper, vel dapibus nisl consectetur. Phasellus\n\t\t\t\t\t\t\tconsectetur sapien non lacus imperdiet dapibus. In facilisis sed mi rutrum consequat. Sed\n\t\t\t\t\t\t\taugue sem diam.\n\t\t\t\t\t\t</p>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t</div>\n\t</div>\n</section>",
+          "_cid": "tSOyN0jzYw",
+          "_anchor": "features019-1o",
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {}
+        },
+        {
+          "alias": false,
+          "_styles": {
+            "padding-top": "(@paddingTop * 1rem)",
+            "padding-bottom": "(@paddingBottom * 1rem)",
+            "& when (@bg-type = \"color\")": {
+              "background": "@bg-value"
+            },
+            "& when (@bg-type = \"image\")": {
+              "background-image": "url(@bg-value)"
+            },
+            ".mbr-fallback-image.disabled": {
+              "display": "none"
+            },
+            ".content-wrap": {
+              "display": "flex",
+              "flex-direction": "column",
+              "height": "100%",
+              ".mbr-section-btn": {
+                "justify-self": "flex-end",
+                "margin-top": "auto"
+              }
+            },
+            ".mbr-fallback-image": {
+              "display": "block",
+              "background-size": "cover",
+              "background-position": "center center",
+              "width": "100%",
+              "height": "100%",
+              "position": "absolute",
+              "top": "0",
+              "& when (@bg-type = \"video\")": {
+                "background-image": "url(@fallBackImage)"
+              }
+            },
+            ".content-head": {
+              "max-width": "800px"
+            },
+            ".card1": {
+              "background": "@cardBg1"
+            },
+            ".card2": {
+              "background": "@cardBg2"
+            },
+            ".card3": {
+              "background": "@cardBg3"
+            },
+            ".card4": {
+              "background": "@cardBg4"
+            },
+            ".image-wrap": {
+              "padding-bottom": "0rem",
+              "position": "relative",
+              ".social-row": {
+                "position": "absolute",
+                "bottom": "0.5rem",
+                "right": "1rem"
+              }
+            },
+            ".card": {
+              "margin-bottom": "2rem",
+              "@media (max-width: 767px)": {
+                "margin-bottom": "1rem"
+              }
+            },
+            ".card-wrap": {
+              "height": "100%",
+              "display": "flex",
+              "flex-direction": "column",
+              ".image-wrap img": {
+                "width": "100%",
+                "height": "400px",
+                "object-fit": "cover"
+              },
+              ".content-wrap": {
+                "@media (min-width: 768px)": {
+                  "padding": "2.25rem"
+                },
+                "@media (max-width: 767px)": {
+                  "padding": "1.5rem"
+                }
+              }
+            },
+            ".title-row": {
+              "position": "absolute",
+              "left": "0",
+              "bottom": "0",
+              "right": "0",
+              "padding": "2rem",
+              "width": "100%",
+              "@media (max-width: 767px)": {
+                "padding": "1.5rem"
+              }
+            },
+            ".card-title2, .social-row": {
+              "color": "#3a341c"
+            },
+            ".card-title1, .social-row": {
+              "color": "#ffa600"
+            },
+            ".card-title3, .social-row": {
+              "color": "#ffeb69"
+            },
+            ".card-text3, .mbr-section-btn": {
+              "color": "#ffffff"
+            },
+            ".card-text1, .mbr-section-btn": {
+              "color": "#260a30"
+            },
+            ".card-text2, .mbr-section-btn": {
+              "color": "#ffffff"
+            },
+            ".card-title4, .social-row": {
+              "color": "#ffd7ef"
+            },
+            ".card-text4, .mbr-section-btn": {
+              "color": "#320707"
+            },
+            ".mbr-role2": {
+              "color": "#ffffff"
+            },
+            ".mbr-role4": {
+              "color": "#320707"
+            },
+            ".mbr-role3": {
+              "color": "#ffffff"
+            }
+          },
+          "_name": "features09",
+          "_sourceTheme": "startm5",
+          "_customHTML": "<section data-bs-version=\"5.1\" class=\"features9\" group=\"Features\" data-bg-video=\"{{bg.type == 'video' && bg.value.url}}\" mbr-class=\"{'mbr-parallax-background':bg.parallax}\">\n\t<mbr-parameters>\n\t\t<header>Size</header>\n\t\t<input type=\"checkbox\" name=\"fullWidth\" title=\"Full Width\">\n\t\t<input inline type=\"range\" title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"10\" step=\"1\" value=\"6\">\n\t\t<input inline type=\"range\" title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"10\" step=\"1\" value=\"6\">\n\t\t<header>Show/Hide</header>\n\t\t<input type=\"checkbox\" title=\"Title\" name=\"showTitle\" checked>\n\t\t<input type=\"checkbox\" title=\"Subtitle\" name=\"showSubtitle\">\n\t\t<select title=\"Cards\" name=\"cardsAmount\">\n\t\t\t<option value=\"1\">1</option>\n\t\t\t<option value=\"2\">2</option>\n\t\t\t<option value=\"3\">3</option>\n\t\t\t<option value=\"4\" selected>4</option>\n\t\t</select>\n\t\t<header>Card</header>\n\t\t<input type=\"checkbox\" title=\"Title\" name=\"showName\" checked>\n\t\t<input type=\"checkbox\" title=\"Subtitle\" name=\"showRole\">\n\t\t<input type=\"checkbox\" title=\"Text\" name=\"showCardText\" checked>\n\t\t<input type=\"checkbox\" title=\"Buttons\" name=\"showButtons\">\n\t\t<header>Color</header>\n\t\t<input type=\"color\" title=\"Card 1\" name=\"cardBg1\" value=\"#ffa600\">\n\t\t<input type=\"color\" title=\"Card 2\" name=\"cardBg2\" value=\"#ffc091\" condition=\"cardsAmount > 1\">\n\t\t<input type=\"color\" title=\"Card 3\" name=\"cardBg3\" value=\"#3a381c\" condition=\"cardsAmount > 2\">\n\t\t<input type=\"color\" title=\"Card 4\" name=\"cardBg4\" value=\"#ffd7ef\" condition=\"cardsAmount > 3\">\n\n\t\t<header>Background</header>\n\t\t<fieldset type=\"background\" name=\"bg\" parallax>\n\t\t\t<input type=\"image\" title=\"Image\" value=\"../_images/background1.jpg\" parallax>\n\t\t\t<input type=\"color\" title=\"Color\" value=\"#d88828\" selected>\n\t\t\t<input type=\"video\" title=\"Video\" value=\"https://vimeo.com/428046504\">\n\t\t</fieldset>\n\t\t<header condition=\"bg.type === 'video'\">Fallback Image</header>\n\t\t<input type=\"image\" title=\"Fallback Image\" value=\"../_images/background1.jpg\" name=\"fallBackImage\" condition=\"bg.type === 'video'\">\n\t\t<input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" checked condition=\"bg.type !== 'color'\">\n\t\t<input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#000000\" condition=\"overlay && bg.type !== 'color'\">\n\t\t<input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.5\" condition=\"overlay && bg.type !== 'color'\">\n\t</mbr-parameters>\n\n\t<div class=\"mbr-fallback-image disabled\" mbr-if=\"bg.type == 'video'\"></div>\n\t<div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type!== 'color'\" mbr-style=\"{'opacity': overlayOpacity, 'background-color': overlayColor}\"></div>\n\t<div mbr-class=\"{'container': !fullWidth, 'container-fluid': fullWidth}\">\n\t\t<div class=\"row justify-content-center\">\n\t\t\t<div class=\"col-12 mb-5 content-head\" mbr-if=\"showTitle || showSubtitle\">\n\t\t\t\t<h3 class=\"mbr-section-title mbr-fonts-style align-center mb-0\" mbr-theme-style=\"display-2\" mbr-if=\"showTitle\" data-app-selector=\".mbr-section-title\"><b>Trả lời các câu hỏi liên quan chủ đề pha cà phê ngon</b></h3>\n\t\t\t\t<p class=\"mbr-section-subtitle mbr-fonts-style align-center mb-0 mt-4\" mbr-theme-style=\"display-7\" mbr-if=\"showSubtitle\" data-app-selector=\".mbr-section-subtitle\">\n\t\t\t\t\tSubtitle\n\t\t\t\t</p>\n\t\t\t</div>\n\t\t\t<div class=\"col-sm-6 col-md-12 col-lg-8 card\">\n\t\t\t\t<div class=\"card-wrap card1\">\n\t\t\t\t\t<div class=\"image-wrap\">\n\t\t\t\t\t\t<img src=\"@PROJECT_PATH@/assets/images/d730b148f125267b7f34-600x900.jpg\" alt=\"Mobirise Website Builder\">\n\t\t\t\t\t\t<div class=\"title-row display-7\">\n\t\t\t\t\t\t\t<h5 class=\"card-title1 mbr-fonts-style align-left m-0\" mbr-theme-style=\"display-2\" mbr-if=\"showName\" data-app-selector=\".card-title1, .social-row\"><b>Nên dùng phin gì để pha cà phê sữa ngon?</b></h5>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</div>\n\t\t\t\t\t<div class=\"content-wrap\">\n\t\t\t\t\t\t<h6 class=\"mbr-role mbr-fonts-style align-left mb-3\" mbr-theme-style=\"display-7\" mbr-if=\"showRole\" data-app-selector=\".mbr-role\">\n\t\t\t\t\t\t\t<b>Subtitle</b>\n\t\t\t\t\t\t</h6>\n\t\t\t\t\t\t<p class=\"card-text1 mbr-fonts-style align-left\" data-app-selector=\".card-text1, .mbr-section-btn\" mbr-theme-style=\"display-7\" mbr-if=\"showCardText\">\n\t\t\t\t\t\t\tPhin cà phê nhôm là lựa chọn hàng đầu đối với các chuyên gia khắt khe về khẩu vị cà phê. Phin nhôm giữ nhiệt tốt, giúp cà phê ngấm nở đều hơn và chắc chắn sẽ giữ được hương vị nguyên chất của cà phê.<br>Tham khảo: Phin pha cà phê chuẩn của Tafa.vn</p>\n\t\t\t\t\t\t<div mbr-buttons mbr-theme-style=\"display-7\" class=\"mbr-section-btn btn-section align-left\" mbr-if=\"showButtons\">\n\t\t\t\t\t\t\t<a class=\"btn article-btn btn-primary\" href=\"https://mobiri.se\" data-app-placeholder=\"Type Text\"><strong>Read more</strong></a>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t</div>\n\n\t\t\t<div class=\"col-sm-6 col-md-12 col-lg-4 card\" mbr-if=\"cardsAmount > 1\">\n\t\t\t\t<div class=\"card-wrap card2\">\n\t\t\t\t\t<div class=\"content-wrap\">\n\t\t\t\t\t\t<h5 class=\"card-title2 mbr-fonts-style align-left pb-4\" mbr-theme-style=\"display-2\" mbr-if=\"showName\" data-app-selector=\".card-title2, .social-row\"><b>Cách chọn đá pha cà phê ngon?</b></h5>\n\t\t\t\t\t\t<h6 class=\"mbr-role2 mbr-fonts-style align-left mb-3\" mbr-theme-style=\"display-7\" mbr-if=\"showRole\" data-app-selector=\".mbr-role2\">\n\t\t\t\t\t\t\t<b>Subtitle</b>\n\t\t\t\t\t\t</h6>\n\t\t\t\t\t\t<p class=\"card-text2 mbr-fonts-style align-left\" data-app-selector=\".card-text2, .mbr-section-btn\" mbr-theme-style=\"display-7\" mbr-if=\"showCardText\">Đá nên được làm từ nguồn nước tinh khiết sẽ tạo ra những khối đá chuẩn và tan chậm hơn. Đối với cà phê sữa nên chọn đá nguyên khối to tránh cho đá tan nhanh làm loãng cà phê.</p>\n\t\t\t\t\t\t<div mbr-buttons mbr-theme-style=\"display-7\" class=\"mbr-section-btn btn-section align-left\" mbr-if=\"showButtons\">\n\t\t\t\t\t\t\t<a class=\"btn article-btn btn-primary\" href=\"https://mobiri.se\" data-app-placeholder=\"Type Text\"><strong>Read more</strong></a>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t\t<div class=\"col-sm-6 col-md-12 col-lg-4 card\" mbr-if=\"cardsAmount > 2\">\n\t\t\t\t<div class=\"card-wrap card3\">\n\t\t\t\t\t<div class=\"content-wrap\">\n\t\t\t\t\t\t<h5 class=\"card-title3 mbr-fonts-style align-left pb-4\" mbr-theme-style=\"display-2\" mbr-if=\"showName\" data-app-selector=\".card-title3, .social-row\"><b>Nhiệt độ nước bao nhiêu để pha cà phê chuẩn vị?</b></h5>\n\t\t\t\t\t\t<h6 class=\"mbr-role3 mbr-fonts-style align-left mb-3\" mbr-theme-style=\"display-7\" mbr-if=\"showRole\" data-app-selector=\".mbr-role3\">\n\t\t\t\t\t\t\t<b>Subtitle</b>\n\t\t\t\t\t\t</h6>\n\t\t\t\t\t\t<p class=\"card-text3 mbr-fonts-style align-left\" data-app-selector=\".card-text3, .mbr-section-btn\" mbr-theme-style=\"display-7\" mbr-if=\"showCardText\">\n\t\t\t\t\t\t\tNhiệt độ lý tưởng để cân bằng được hương vị cà phê là vào khoảng 90-96 độ C tương đương 194-205 độ F.<br>Lưu ý: nếu pha cà phê ở nhiệt độ quá cao sẽ làm cho ly cà phê của Bạn đắng gắt&nbsp; và khét hơn nha.<br><br><br></p>\n\t\t\t\t\t\t<div mbr-buttons mbr-theme-style=\"display-7\" class=\"mbr-section-btn btn-section align-left\" mbr-if=\"showButtons\">\n\t\t\t\t\t\t\t<a class=\"btn article-btn btn-primary\" href=\"https://mobiri.se\" data-app-placeholder=\"Type Text\"><strong>Read more</strong></a>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t</div>\n\n\t\t\t<div class=\"col-sm-6 col-md-12 col-lg-8 card\" mbr-if=\"cardsAmount > 3\">\n\t\t\t\t<div class=\"card-wrap card4\">\n\t\t\t\t\t<div class=\"image-wrap\">\n\t\t\t\t\t\t<img src=\"@PROJECT_PATH@/assets/images/2599a677d21a05445c0b-509x695.jpg\" alt=\"Mobirise Website Builder\">\n\t\t\t\t\t\t<div class=\"title-row display-7\">\n\t\t\t\t\t\t\t<h5 class=\"card-title4 mbr-fonts-style align-left m-0\" mbr-theme-style=\"display-2\" mbr-if=\"showName\" data-app-selector=\".card-title4, .social-row\">Nên chọn loại cà phê gì để pha phin ngon nhất?</h5>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</div>\n\t\t\t\t\t<div class=\"content-wrap\">\n\t\t\t\t\t\t<h6 class=\"mbr-role4 mbr-fonts-style align-left mb-3\" mbr-theme-style=\"display-7\" mbr-if=\"showRole\" data-app-selector=\".mbr-role4\">\n\t\t\t\t\t\t\t<b>Subtitle</b>\n\t\t\t\t\t\t</h6>\n\t\t\t\t\t\t<p class=\"card-text4 mbr-fonts-style align-left\" data-app-selector=\".card-text4, .mbr-section-btn\" mbr-theme-style=\"display-7\" mbr-if=\"showCardText\">\n\t\t\t\t\t\t\tCà phê dùng pha phin ngon nhất là cà phê được rang từ 3 ngày đến 6 tháng, nếu Bạn thích vị đắng đậm thì nên chọn loại cà phê Robusta, còn khẩu vị Bạn thích thơm chua nhẹ thì nên ưu tiên chọn dòng Arabica. Bên cạnh đó Tafa cũng cho ra một dòng cà phê pha phin cân bằng khẩu vị phù hợp với nhiều đối tượng sử dụng.&nbsp;<br>Tham khảo: Cà phê pha phin Gu Tafa</p>\n\t\t\t\t\t\t<div mbr-buttons mbr-theme-style=\"display-7\" class=\"mbr-section-btn btn-section align-left\" mbr-if=\"showButtons\">\n\t\t\t\t\t\t\t<a class=\"btn article-btn btn-primary\" href=\"https://mobiri.se\" data-app-placeholder=\"Type Text\"><strong>Read more</strong></a>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t</div>\n\t</div>\n</section>",
+          "_cid": "tSOyZgl6aO",
+          "_anchor": "features09-1p",
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {}
+        }
+      ]
+    }
+  }
+}
