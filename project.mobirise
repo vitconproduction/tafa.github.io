@@ -112,7 +112,7 @@
               "flex-direction": "row-reverse"
             },
             ".mbr-description": {
-              "color": "#d88828",
+              "color": "#232323",
               "text-align": "left"
             }
           },
